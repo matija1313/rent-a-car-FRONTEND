@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ContactComponent } from './components/pages/contact/contact.component';
-import { HomeComponent } from './components/pages/home/home.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent,
+    loadChildren: () =>
+      import('./components/pages/pages.module').then((pm) => pm.PagesModule),
   },
   {
-    path: 'contact',
-    component: ContactComponent,
+    path: 'admin',
+    loadChildren: () =>
+      import('./components/admin/admin.module').then((am) => am.AdminModule),
   },
 ];
 
