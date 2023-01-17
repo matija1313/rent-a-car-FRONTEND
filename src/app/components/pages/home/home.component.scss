@@ -1,0 +1,11 @@
+@import "./../../../styles/colors";
+.home-heading {
+  color: $primary;
+  border: 1px solid $warning;
+}
+.list-element {
+  color: $secondary;
+}
+.p-element {
+  color: $primary;
+}

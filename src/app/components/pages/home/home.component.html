@@ -1,0 +1,17 @@
+<h1 class="home-heading">This is {{ pageTitle }}</h1>
+
+<ul>
+  <li class="list-element" *ngFor="let ac of angularConcepts; let i = index">
+    {{ i + 1 }}-{{ ac }}
+  </li>
+</ul>
+
+<div *ngIf="showDiv">
+  <p>We don't know if this div will be shown</p>
+</div>
+
+<div [ngSwitch]="angularConcepts.length">
+  <p class="p-element" *ngSwitchCase="0">We have no angular concepts</p>
+  <p class="p-element" *ngSwitchCase="1">We have one angular concepts</p>
+  <p class="p-element" *ngSwitchDefault>We have many angular concepts</p>
+</div>
