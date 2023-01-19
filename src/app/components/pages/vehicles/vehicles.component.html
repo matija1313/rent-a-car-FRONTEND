@@ -1,0 +1,30 @@
+<h2>Vehicles</h2>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>RegNO</th>
+      <th>Vehicle Type</th>
+      <th>No of seats</th>
+      <th>Price per day</th>
+      <th>Year of production</th>
+      <th>Kilometers passed</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let v of vehicles">
+      <td>{{ v.regNO }}</td>
+      <td>{{ v.typeName }}</td>
+      <td>{{ v.noOfSeats }}</td>
+      <td>{{ v.pricePerDay }}</td>
+      <td>{{ v.yearOfProduction }}</td>
+      <td>{{ v.kilometersPassed }}</td>
+      <td>
+        <button class="btn btn-primary" routerLink="/vehicle">View</button>
+        &nbsp; <button class="btn btn-warning">Edit</button>&nbsp;
+        <button class="btn btn-danger">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
